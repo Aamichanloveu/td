@@ -1,0 +1,160 @@
+body {
+   margin: 0;
+   padding: 0;
+   font-family: Arial, sans-serif;
+   background-color: #ffe799;
+ }
+ 
+ .container {
+   position: relative;
+   min-height: 100vh;
+   display: flex;
+   justify-content: center;
+ }
+ 
+ .left-stripe, .right-stripe {
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   width: 100px;
+   background: white;
+   z-index: -1;
+ }
+ 
+ .left-stripe { left: 0; }
+ .right-stripe { right: 0; }
+ 
+ .dashed-line {
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   width: 1px;
+   background: repeating-linear-gradient(to bottom, #926034, #926034 5px, transparent 5px, transparent 10px);
+ }
+ 
+ .left-stripe .dashed-line { right: 5px; }
+ .right-stripe .dashed-line { left: 5px; }
+ 
+ .content {
+   max-width: 900px;
+   width: 100%;
+   padding: 20px;
+ }
+ 
+ .header {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 40px;
+   margin-bottom: 25px;
+ }
+ 
+ .site-title {
+   color: #926034;
+   margin: 0;
+   padding: 10px 20px;
+   border: 2px solid #926034;
+   border-radius: 8px;
+   font-size: 28px;
+   min-width: 200px;
+   text-align: center;
+ }
+ 
+ button {
+   padding: 12px 24px;
+   background: #ffe799;
+   border: 2px solid #926034;
+   color: #926034;
+   border-radius: 6px;
+   cursor: pointer;
+   font-size: 16px;
+   transition: all 0.2s;
+   min-width: 100px;
+ }
+ 
+ button:hover {
+   background: #926034;
+   color: white;
+ }
+ 
+ #imageContainer {
+   width: 400px;
+   height: 200px;
+   background: white;
+   border: 2px solid #926034;
+   margin: 0 auto 15px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   overflow: hidden;
+   border-radius: 8px;
+ }
+ 
+ #imageContainer img {
+   max-width: 100%;
+   max-height: 100%;
+   object-fit: contain;
+   display: block;
+ }
+ 
+ .image-placeholder {
+   color: #926034;
+   font-style: italic;
+ }
+ 
+ .controls {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 30px;
+   margin-bottom: 15px;
+ }
+ 
+ .brush-control {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+ }
+ 
+ #timer {
+   font-size: 28px;
+   font-weight: bold;
+   color: #926034;
+   min-width: 60px;
+   text-align: center;
+ }
+ 
+ #brushSize {
+   width: 120px;
+   height: 6px;
+   -webkit-appearance: none;
+   background: #92603455;
+   border-radius: 4px;
+   border: 1px solid #926034;
+ }
+ 
+ #brushSize::-webkit-slider-thumb {
+   -webkit-appearance: none;
+   width: 16px;
+   height: 16px;
+   background: #926034;
+   border: 2px solid white;
+   border-radius: 50%;
+   cursor: pointer;
+ }
+ 
+ #drawingCanvas {
+    width: 600px;
+    height: 250px;
+    border: 2px solid #926034;
+    background: white;
+    cursor: crosshair;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
+   }
+ 
+.canvas-bottom-margin {
+   height: 30px;
+      }

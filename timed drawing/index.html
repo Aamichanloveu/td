@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timed drawing</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <div class="left-stripe">
+    <div class="dashed-line"></div>
+  </div>
+  <div class="right-stripe">
+    <div class="dashed-line"></div>
+  </div>
+  
+  <div class="content">
+    <div class="header">
+      <button id="startBtn">Старт</button>
+      <h1 class="site-title">Timed drawing</h1>
+      <button id="timeBtn">Время</button>
+    </div>
+    
+    <div id="imageContainer">
+      <div class="image-placeholder">Изображение появится после старта</div>
+    </div>
+    
+    <div class="controls">
+      <div class="brush-control">
+        <label>Размер кисти:</label>
+        <input type="range" id="brushSize" min="1" max="20" value="5" disabled>
+      </div>
+      <div id="timer">45</div>
+    </div>
+    
+    <canvas id="drawingCanvas"></canvas>
+    <div class="canvas-bottom-margin"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
